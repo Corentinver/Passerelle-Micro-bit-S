@@ -20,24 +20,22 @@ import gnu.io.NoSuchPortException;
 import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener;
 
-@Component
 public abstract class SerialPortConnector implements SpringSerialPortConnector {
 
     private BufferedReader input;
 
     private NRSerialPort serial;
 
-    @Autowired
-    private SerialPortProperties serialPortProperties;
+
 
     @PostConstruct
     public void connect() throws TooManyListenersException, NoSuchPortException {
 
-        serial = new NRSerialPort(serialPortProperties.getPortName(), serialPortProperties.getBaudRate());
+        serial = new NRSerialPort("", 200);
         serial.connect();
 
         if (!serial.isConnected()) {
-            throw new RuntimeException("Is not possible to open connection in " + serialPortProperties.getPortName() + " port");
+            throw new RuntimeException("Is not possible to open connection in " + "" + " port");
         }
         serial.addEventListener(this);
         serial.notifyOnDataAvailable(true);
