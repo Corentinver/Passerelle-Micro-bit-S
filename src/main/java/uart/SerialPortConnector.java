@@ -19,7 +19,7 @@ import gnu.io.NRSerialPort;
 import gnu.io.NoSuchPortException;
 import gnu.io.SerialPortEvent;
 import gnu.io.SerialPortEventListener;
-
+@Component
 public abstract class SerialPortConnector implements SpringSerialPortConnector {
 
     private BufferedReader input;
@@ -31,7 +31,7 @@ public abstract class SerialPortConnector implements SpringSerialPortConnector {
     @PostConstruct
     public void connect() throws TooManyListenersException, NoSuchPortException {
 
-        serial = new NRSerialPort("", 200);
+        serial = new NRSerialPort("", 115200);
         serial.connect();
 
         if (!serial.isConnected()) {

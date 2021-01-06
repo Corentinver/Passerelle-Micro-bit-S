@@ -10,15 +10,15 @@ import uart.SerialPortConnector;
 
 @Service
 public class UartService {
-
-
+	@Autowired
+	public SerialPortConnector serialPortConnector;
 	
 	public void sendNewFire(FireDTO fire) throws IOException {
-		//serialPortConnector.sendMessage("test");
+		serialPortConnector.sendMessage("test");
 	}
 	
 	public void updateFire(FireDTO fire) throws IOException {
-		//serialPortConnector.sendMessage("test2");
+		serialPortConnector.sendMessage("test2");
 	}
 	
 	
