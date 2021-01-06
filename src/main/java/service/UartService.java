@@ -10,6 +10,7 @@ import uart.SerialPortConnector;
 
 @Service
 public class UartService {
+	
 	@Autowired
 	public SerialPortConnector serialPortConnector;
 	
