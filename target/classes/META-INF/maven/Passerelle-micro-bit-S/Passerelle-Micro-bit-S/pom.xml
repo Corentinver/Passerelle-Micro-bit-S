@@ -31,9 +31,9 @@
 		</dependency>
 		
 		<dependency>
-    		<groupId>com.github.diegosep</groupId>
-    		<artifactId>spring-serial-port-connector</artifactId>
-  		 	<version>0.0.1-RELEASE</version>
+    		<groupId>com.neuronrobotics</groupId>
+    		<artifactId>nrjavaserial</artifactId>
+    		<version>5.2.1</version>
 		</dependency>
 		
 	</dependencies>
