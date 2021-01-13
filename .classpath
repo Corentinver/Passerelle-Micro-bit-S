@@ -45,5 +45,6 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="src" path="/Passerelle-Micro-bit-EM"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
